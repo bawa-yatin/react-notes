@@ -1,0 +1,32 @@
+ReactJS is an open-source, component-based JavaScript library for building fast and interactive user interfaces only for the view layer of the application (for rendering the latest changes in our app). It is maintained by Facebook and is widely used as a base in building single-page websites and mobile applications. A react application is basically a collection of components. A component is a actually a small piece of UI that is independent and reusable in nature. React designs simple views for each state in our application, and React will efficiently update and render just the right component when our data changes.
+
+Components are like pure javascript functions that help make the code easy by splitting the logic into reusable independent code. We can use components as functions and classes. Every react app has atleast one component which is referred to as "root" component which furthur contains other child components that makes up the application.	
+
+A component is typically implemented as a JS class that has some "state" and a render() method. "state" consists of the data that should be displayed when component is rendered. "render()" method is used to display the specified HTML code inside the specified HTML element. In the render() method, we can read the state and return our JSX code to the root component of our app. The output of this method is a React element which is a simple JS object.
+
+Virtual DOM- React uses Virtual DOM exists which is like a lightweight copy of the actual DOM. So for every object that exists in the original DOM, there is an object for that in React Virtual DOM. It is exactly the same, but it does not have the power to directly change the layout of the document. Every time the state of our application is changed, virtual DOM gets updated first instead of the real DOM.
+
+Whenever any new feature or existing one is updated in our application, a virtual DOM is created and it is represented as a tree. Each element in the application is a node in this tree. So, whenever there is a change in state of any element, a new Virtual DOM tree is created. This new Virtual DOM tree is then compared with the previous Virtual DOM tree and make a note of the changes and will update those changes in the real DOM to keep it in sync with the virtual DOM. AFter this, only the updated elements will get rendered on the page again.
+
+
+NPM(Node Package Manager) is the default package manager in Node.js responsible for installing third-party libraries and packages in our application. We use npm to install "create-react-app" which is furthur used to create a new react project.
+"npm i -g create-react-app"
+
+When we create a new react app, all the third party libraries and packages required are created along with it which includes a lightweight-development server, webpack for bundling the files, babel for compiling the JS code. To start the development server we use "npm start" command.
+
+Project Structure of our application
+
+a) node_modules - This folder contains all our third-party libraries and react folder itself. Not to be changed.
+b) public- This folder contains all the public assets that are being used in our app like favicon, index.html and manifest.json. index.html is basically the entry point our application which consists of a "div" element with the id of "root" where our entire react application is going to appear.
+c) src- This folder contains all the components of our app which are implemented as a JS function and contains JSX(Javascript XML) which is basically HTML if we look at the content and decides what the UI is going to look like when this component gets rendered. In order to make this JSX code work, we pass it to Babel which is a modern JS trans-compiler and is used to create React elements which is in plain JS because that's what browsers understand. These elements are then rendered to the React DOM.
+
+In order to embed JavaScript expression in a piece of code written in JSX we will have to wrap that expression in curly braces {}. JSX also allows us to use comments as it allows us to use JavaScript expressions. Comments in JSX begins with /* and ends with */. We can add comments in JSX by wrapping them in curly braces {} just like we did in the case of expressions. 
+
+Babel is a free and open-source JavaScript Transcompiler that is mainly used to convert ES6 and above code into a backward compatible code that can be run by older JS engines.
+
+
+Types of components:-
+
+1) Functional Components- In React, function components are a way to write components that only contain a render method and don't have their own state. They are simply JavaScript functions that may or may not receive data as parameters. We can create a function that takes props(properties) as input and returns what should be rendered. It is also known as a stateless component because they do not hold or manage state.
+
+2) Class Components- These are far more complex than simple functional components as it also contains the state(data to be displayed when component gets rendered) along with render function. We can pass data from one class to other class components.
